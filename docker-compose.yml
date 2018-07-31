@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  mongo:
+    image: mongo
+
+  xhgui:
+    depends_on:
+      - mongo
+    image: xhgui
+    ports:
+      - "8086:80"
